@@ -3,7 +3,8 @@ using System;
 
 string valor1, valor2;
 char operacion, otroCalculo;
-int x, y, verif;
+double x, y;
+int verif;
 do
 {
     verif = 0;
@@ -20,10 +21,10 @@ do
         Console.WriteLine("Ingrese otro valor:");
         valor2 = Console.ReadLine();
         verif++;
-    } while (!(int.TryParse(valor1, out x)) || !(int.TryParse(valor2, out y)) ||
+    } while (!(double.TryParse(valor1, out x)) || !(double.TryParse(valor2, out y)) ||
     (operacion != '+' && operacion != '-' && operacion != '*' && operacion != '/'));
 
-    int resultado = 0;
+    double resultado = 0;
     switch (operacion)
     {
         case '+':
@@ -47,22 +48,22 @@ do
     otroCalculo = Console.ReadKey().KeyChar;
 } while (otroCalculo == 'y' || otroCalculo == 'Y');
 
-int Suma(int a, int b)
+double Suma(double a, double b)
 {
     return (a + b);
 }
 
-int Resta(int a, int b)
+double Resta(double a, double b)
 {
     return (a - b);
 }
 
-int Producto(int a, int b)
+double Producto(double a, double b)
 {
     return (a * b);
 }
 
-int Cociente(int a, int b)
+double Cociente(double a, double b)
 {
     return (a / b);
 }
