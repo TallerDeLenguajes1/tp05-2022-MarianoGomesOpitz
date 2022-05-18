@@ -47,6 +47,34 @@ do
     otroCalculo = Console.ReadKey().KeyChar;
 } while (otroCalculo == 'y' || otroCalculo == 'Y');
 
+string value;
+char otroNumero;
+double num;
+do
+{
+    verif = 0;
+    do
+    {
+        if (verif > 1)
+        {
+            Console.WriteLine("\nHa ingresado un valor erroneo, ingrese de nuevo!!\n");
+        }
+        Console.WriteLine("\nIngrese un número:");
+        value = Console.ReadLine();
+        verif++;
+    } while (!(double.TryParse(value, out num)));
+
+    Console.WriteLine("Valor absoluto de " + num + ": " + ValorAbsoluto(num));
+    Console.WriteLine("Cuadrado de " + num + ": " + Cuadrado(num));
+    Console.WriteLine("Raiz cuadrada de " + num + ": " + RaizCuadrada(num));
+    Console.WriteLine("Seno de " + num + ": " + Seno(num));
+    Console.WriteLine("Coseno de " + num + ": " + Coseno(num));
+    Console.WriteLine("Parte entera de " + num + ": " + ParteEntera(num));
+
+    Console.WriteLine("Desea insertar otro número? ('Y' para Sí):");
+    otroNumero = Console.ReadKey().KeyChar;
+} while (otroNumero == 'y' || otroNumero == 'Y');
+
 int Suma(int a, int b)
 {
     return (a + b);
@@ -65,4 +93,34 @@ int Producto(int a, int b)
 int Cociente(int a, int b)
 {
     return (a / b);
+}
+
+double ValorAbsoluto(double z)
+{
+    return (Math.Abs(z));
+}
+
+double Cuadrado(double z)
+{
+    return (Math.Pow(z, 2));
+}
+
+double RaizCuadrada(double z)
+{
+    return (Math.Sqrt(z));
+}
+
+double Seno(double z)
+{
+    return (Math.Sin(z));
+}
+
+double Coseno(double z)
+{
+    return (Math.Cos(z));
+}
+
+double ParteEntera(double z)
+{
+    return (Math.Round(z));
 }
