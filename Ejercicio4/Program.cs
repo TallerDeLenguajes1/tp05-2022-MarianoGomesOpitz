@@ -101,6 +101,52 @@ foreach (char caracter in cadena)
     Console.WriteLine($"Caracter perteneciente a la cadena: {caracter}");
 }
 
+string frase, palabra;
+Console.WriteLine("\nBuscar en una cadena");
+Console.WriteLine("Ingrese la frase:");
+frase = Console.ReadLine();
+Console.WriteLine("Ingrese la palabra a buscar:");
+palabra = Console.ReadLine();
+if ((frase.ToLower()).Contains(palabra.ToLower()))
+{
+    Console.WriteLine("La palabra ingresada está presente en la frase");
+}
+else
+{
+    Console.WriteLine("La palabra ingresada no se encuentra en la frase");
+}
+
+
+Console.WriteLine("\nMayúscula y minúscula");
+Console.WriteLine("Ingrese una cadena:");
+string mayuMinu = Console.ReadLine();
+Console.WriteLine($"Cadena original:\n{mayuMinu}");
+string aux = mayuMinu.ToUpper();
+Console.WriteLine($"Cadena convertida a mayúscula:\n{aux}");
+aux = aux.ToLower();
+Console.WriteLine($"Cadena convertida a minúscula:\n{aux}");
+
+Console.WriteLine($"\nIngrese una nueva cadena para comparar con \"{mayuMinu}\":");
+string comp = Console.ReadLine();
+int ver1 = String.Compare(mayuMinu, comp, comparisonType: StringComparison.Ordinal);//Compara completamente
+int ver2 = String.Compare(mayuMinu, comp, comparisonType: StringComparison.OrdinalIgnoreCase);//Compara sin importar mayúsculas y minúsculas
+if (ver1 == 0)
+{
+    Console.WriteLine("Las cadenas ingresadas son completamente idénticas");
+}
+else
+{
+    if (ver2 == 0)
+    {
+        Console.WriteLine("Las cadenas son iguales, pero no idénticas");
+    }
+    else
+    {
+        Console.WriteLine("Las cadenas no son iguales");
+    }
+}
+
+
 ////////////////Funciones
 double Suma(double a, double b)
 {
