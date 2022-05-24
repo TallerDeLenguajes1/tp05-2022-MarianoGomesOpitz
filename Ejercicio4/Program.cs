@@ -88,12 +88,20 @@ do
             solucion = cociente;
             break;
     }
-    texto = solucion + " de " + valor1 + " y de " + valor2 + " es igual a: " + resultado;
-    Console.WriteLine(texto + "\n");
+    texto = string.Format($"{solucion} de {valor1} y de {valor2} es igual a: {resultado}");
+    Console.WriteLine($"{texto}\n");
     Console.WriteLine("Desea realizar otra operación? ('Y' para Sí):");
     otroCalculo = Console.ReadKey().KeyChar;
 } while (otroCalculo == 'y' || otroCalculo == 'Y');
 
+Console.WriteLine("\nIngrese una cadena para recorrer con un ciclo foreach:");
+cadena = Console.ReadLine();
+foreach (char caracter in cadena)
+{
+    Console.WriteLine($"Caracter perteneciente a la cadena: {caracter}");
+}
+
+////////////////Funciones
 double Suma(double a, double b)
 {
     return (a + b);
