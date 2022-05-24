@@ -28,12 +28,16 @@
 
     * @ impide el funcionamiento de las secuencias de escape, es decir, una secuencia de escape 
     ahora es tratada como texto. Por ejemplo:
-    >Console.WriteLine("Hola \n Mundo"); // Cadena sin @
-    >Console.WriteLine(@"Hola \n Mundo"); // Cadena con @
+    ````
+    Console.WriteLine("Hola \n Mundo"); // Cadena sin @
+    Console.WriteLine(@"Hola \n Mundo"); // Cadena con @
+    ````
 
     * $ proporciona una mejor manera de insertar variables en una cadena de caracteres, utilizando {} 
     para agilizar la lectura y comprensión del código. Por ejemplo:
+    ````
     >int var1 = 54, var2 = 30;
     >Console.WriteLine("var1: + var1 +, var2: + var2); // Las comillas y los signos de suma relentizan la lectura
     >Console.WriteLine("var1: {0}, var2: {1}", var1, var2); // Hay que saber cual es la variable que va en cada posición
     >Console.WriteLine($"var1: {var1}, var2: {var2}"); // Con$" se puede insertar las variables directamente en la cadena
+    ````
