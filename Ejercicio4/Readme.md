@@ -9,9 +9,9 @@
 
 * ¿Qué secuencias de escape tiene el tipo string?
 
-    * \' -> Comillas simples
-    * \" -> Comillas dobles
-    * \\ -> Barra invertida
+    * \\' -> Comillas simples
+    * \\" -> Comillas dobles
+    * \\\ -> Barra invertida
     * \0 -> Nulo
     * \a -> Alerta
     * \b -> Retroceso
